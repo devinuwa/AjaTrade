@@ -1,0 +1,27 @@
+# Secrets — never commit real tokens
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Local database
+*.db
+*.sqlite3
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Editor / OS
+.DS_Store
+.vite/

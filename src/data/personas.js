@@ -1,0 +1,38 @@
+export const personas = [
+  {
+    initials: "M",
+    name: "Musa",
+    age: "42",
+    role: "Maize farmer",
+    location: "Kaduna",
+    language: "Hausa",
+    description: "Sends a photo of Striga weeds and gets a control plan by voice.",
+  },
+  {
+    initials: "F",
+    name: "Folake",
+    age: "35",
+    role: "Tomato farmer",
+    location: "Oyo",
+    language: "Yoruba",
+    description: "Gets a watering plan for her sloped farm and a fertilizer plan with cost.",
+  },
+  {
+    initials: "C",
+    name: "Chidi",
+    age: "31",
+    role: "Yam farmer",
+    location: "Enugu",
+    language: "Igbo",
+    description: "Photographs his soil test and hears what it means in Igbo.",
+  },
+  {
+    initials: "A",
+    name: "Ada",
+    age: "29",
+    role: "Vegetable farmer",
+    location: "Jos",
+    language: "Pidgin",
+    description: "Types a quick message and gets the best seed variety for the season.",
+  },
+];

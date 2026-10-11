@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens (Tailwind v4 @theme)
+   Exposed as utilities: bg-brand-green, text-ink, font-heading, rounded-card …
+--------------------------------------------------------------------------- */
+@theme {
+  /* Brand palette */
+  --color-brand-green: #0b6b3a;
+  --color-brand-dark: #064226;
+  --color-brand-yellow: #f5a623;
+  --color-cream: #faf8f1;
+  --color-mint: #eaf4ec;
+  --color-ink: #1f2a24;
+
+  /* Typography */
+  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Warm, generous shape */
+  --radius-card: 1.5rem; /* 24px */
+  --radius-pill: 9999px;
+
+  /* Soft shadows */
+  --shadow-soft: 0 12px 32px -16px rgb(6 66 38 / 0.22);
+  --shadow-soft-lg: 0 24px 60px -28px rgb(6 66 38 / 0.3);
+
+  /* Gentle float used by the hero's floating chips */
+  --animate-float: float 7s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    /* Body copy is 18px — low-literacy, voice-first audience */
+    font-size: 18px;
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-cream);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-brand-dark);
+    font-weight: 700;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  /* Visible focus states everywhere */
+  :focus-visible {
+    outline: 3px solid var(--color-brand-yellow);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-yellow);
+    color: var(--color-brand-dark);
+  }
+}
+
+/* Respect the user's motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

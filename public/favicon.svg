@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="AjaTrade">
+  <path
+    d="M36 8h48c15.5 0 28 12.5 28 28v32c0 15.5-12.5 28-28 28H52l-14 22c-2.6 4-8.5 2.4-8.9-2.3L28 96.4C15.7 93.7 8 82.6 8 70V36C8 20.5 20.5 8 36 8z"
+    fill="#0B6B3A"
+  />
+  <path
+    d="M30 68c0-12 6.5-19 13.5-19S56 55 56 68c0-12 6.5-19 13.5-19S83 55 83 68"
+    fill="none"
+    stroke="#F5A623"
+    stroke-width="11"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path d="M70 46c4-14 16-24 30-26 1.5 15-6 28-20 32-6 1.7-11-1.4-10-6z" fill="#F5A623" />
+  <path d="M72 50c6-9 14-16 24-21" fill="none" stroke="#0B6B3A" stroke-width="3" stroke-linecap="round" />
+</svg>

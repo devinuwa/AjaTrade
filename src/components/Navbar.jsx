@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 
 import logo from "../assets/logo.png";
 import { navbarCopy, navCta, navLinks } from "../data/navbar.js";
+import { SITE } from "../data/site.js";
 import { useScrolled } from "../hooks/useScrolled.js";
 import Button from "./Button.jsx";
 
@@ -84,7 +85,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-3 sm:px-8 lg:px-12">
-        <a href="#hero" className="flex shrink-0 items-center" aria-label={navbarCopy.homeLabel}>
+        <a href="/#hero" className="flex shrink-0 items-center" aria-label={navbarCopy.homeLabel}>
           <img
             src={logo}
             alt={navbarCopy.logoAlt}
@@ -108,7 +109,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <Button href={navCta.href} size="sm" className="hidden lg:inline-flex">
+          <Button href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" icon={MessageCircle} size="sm" className="hidden lg:inline-flex">
             {navCta.label}
           </Button>
 
@@ -150,7 +151,7 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          <Button href={navCta.href} onClick={closeMenu} className="mt-6 w-full">
+          <Button href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" icon={MessageCircle} onClick={closeMenu} className="mt-6 w-full">
             {navCta.label}
           </Button>
         </div>

@@ -1,3 +1,5 @@
+import { SITE } from "./site.js";
+
 /**
  * Navbar copy and link lists.
  *
@@ -6,14 +8,14 @@
  */
 
 export const navLinks = [
-  { label: "What it does", href: "#features" },
-  { label: "Bot screens", href: "#demo" },
-  { label: "Tutorial", href: "#tutorial" },
-  { label: "Impact", href: "#impact" },
-  { label: "SDGs", href: "#sdgs" },
+  { label: "What it does", href: "/#features" },
+  { label: "Bot screens", href: "/#demo" },
+  { label: "Tutorial", href: "/#tutorial" },
+  { label: "Impact", href: "/#impact" },
+  { label: "SDGs", href: "/#sdgs" },
 ];
 
-export const navCta = { label: "Join the Waitlist", href: "#waitlist" };
+export const navCta = { label: "Chat on WhatsApp", href: SITE.whatsappUrl };
 
 export const navbarCopy = {
   brand: "AjaTrade",

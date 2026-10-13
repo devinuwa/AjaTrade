@@ -8,6 +8,7 @@ import SectionHeading from "../components/SectionHeading.jsx";
 import { PHONE_DIMENSIONS } from "../components/PhoneMockup.jsx";
 import { screens } from "../data/screens.js";
 import { sectionCopy } from "../data/sections.js";
+import { SITE } from "../data/site.js";
 
 function prefersReducedMotion() {
   return typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
@@ -116,7 +117,7 @@ export default function BotScreens() {
             </span>
           ))}
         </div>
-        <Button href="#waitlist">Try the demo</Button>
+        <Button href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer">Try it on WhatsApp</Button>
         <div className="flex gap-2" aria-label="Choose a conversation">
           {screens.map((screen, index) => (
             <button

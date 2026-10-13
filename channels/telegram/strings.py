@@ -31,7 +31,7 @@ TEXTS: dict[str, dict[str, str]] = {
         "menu_connect_vendor": "Connect me to a herbicide/fertilizer vendor",
         "menu_talk_human": "Talk to a real person",
         # Vendor menu
-        "menu_register": "Register as a vendor (early access waitlist)",
+        "menu_register": "Register as a vendor",
         "menu_list_products": "List your products or prices",
         "menu_find_buyers": "Get connected to buyers",
         "menu_learn_more": "Learn more about AjaTrade for sellers",

@@ -8,7 +8,7 @@ Pidgin and English**, and replies as **voice notes**.
 
 Powered by **N-ATLAS** (NCAIR / Awarri), Nigeria's open multilingual model.
 
-**Status: pre-launch.**
+**Status: live on WhatsApp.**
 
 ## Stack
 

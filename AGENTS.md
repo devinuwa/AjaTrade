@@ -193,7 +193,7 @@ set). This is the "sell itself" moment — don't skip it.
 **Vendor-track segment example:**
 
 > Hello {name}, I am AjaTrade. Here's how I can help you grow your business:
-> 1️⃣ Register as a vendor (early access waitlist)
+> 1️⃣ Register as a vendor
 > 2️⃣ List your products or prices
 > 3️⃣ Get connected to buyers
 > 4️⃣ Learn more about AjaTrade for sellers
@@ -375,7 +375,7 @@ GROQ_MODEL_VISION=qwen/qwen3-32b
       (YarnGPT2 / SoroTTS TTS + Cohere Transcribe / SBPN ASR)
 - [ ] Customer path: price intent returns a real answer
 - [ ] Customer path: vendor connection request is captured and logged
-- [ ] Vendor path: registration/waitlist info is captured
+- [ ] Vendor path: registration information is captured
 - [ ] Test end-to-end with 2–3 real Telegram accounts across both segments
 
 ---

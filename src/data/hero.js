@@ -5,14 +5,16 @@
  * site) used to show what a voice-first exchange looks like.
  */
 
+import { SITE } from "./site.js";
+
 export const heroCopy = {
-  badge: "🚀 Pre-launch · Join the waitlist",
+  badge: "🟢 Live on WhatsApp now",
   title: "Farm smarter in your own language.",
   subtext:
     "Speak or type in Yoruba, Hausa, Igbo, Pidgin or English on WhatsApp. AjaTrade answers with a voice note in your language.",
-  primaryCta: { label: "Join the Waitlist", href: "#waitlist" },
+  primaryCta: { label: "Chat on WhatsApp", href: SITE.whatsappUrl },
   secondaryCta: { label: "See how it works", href: "#features" },
-  note: "No new app to download. Powered by N-ATLAS, Nigeria's open multilingual model.",
+  note: "Free to use. No app to download. Powered by N-ATLAS, Nigeria's open multilingual model.",
   languagesLabel: "Languages AjaTrade speaks",
   languages: [
     { label: "Yorùbá", lang: "yo" },

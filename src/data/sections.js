@@ -8,11 +8,13 @@
  * Navbar copy lives in src/data/navbar.js and hero copy in src/data/hero.js.
  */
 
+import { SITE } from "./site.js";
+
 export const brand = {
   name: "AjaTrade",
   tagline:
     "[PLACEHOLDER: one-line tagline — voice-first AI on WhatsApp for Nigerian farmers, traders and manufacturers]",
-  footerNote: "AjaTrade is currently in development. © 2026.",
+  footerNote: "© 2026 AjaTrade.",
 };
 
 export const accessibilityCopy = {
@@ -27,7 +29,7 @@ export const footerCopy = {
   socials: [
     { label: "Twitter / X", href: "#" },
     { label: "Instagram", href: "#" },
-    { label: "LinkedIn", href: "#" },
+    { label: SITE.youtubeHandle, href: SITE.youtubeUrl },
   ],
   note: brand.footerNote,
 };
@@ -70,11 +72,11 @@ export const sectionCopy = {
     subtext: "AjaTrade directly advances these UN Sustainable Development Goals.",
   },
   personas: {
-    title: "Real people, real farms, real languages.",
-    subtext: "",
+    title: "Who AjaTrade is built for",
+    subtext: "These personas are illustrative — they represent the kinds of people AjaTrade serves.",
   },
-  waitlist: {
-    title: "Be the first to try AjaTrade",
-    subtext: "AjaTrade isn't live yet. Leave your email and we'll notify you the moment it's ready.",
+  chat: {
+    title: "Start chatting with AjaTrade",
+    subtext: "Scan the QR code with your phone camera or tap the button. Send a voice note, a photo or a message in your language.",
   },
 };

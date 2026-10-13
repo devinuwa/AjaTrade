@@ -1,4 +1,4 @@
-import { Mic, Phone, Play, Video } from "lucide-react";
+import { MessageCircle, Mic, Phone, Play, Video } from "lucide-react";
 
 import logoMark from "../assets/logo-mark.png";
 import Button from "../components/Button.jsx";
@@ -7,20 +7,33 @@ import Reveal from "../components/Reveal.jsx";
 import Section from "../components/Section.jsx";
 import Waveform from "../components/Waveform.jsx";
 import { heroCopy } from "../data/hero.js";
+import { SITE } from "../data/site.js";
 
 const copy = heroCopy;
 
-/** Chip anchors around the phone frame — presentational, index-matched to `chips`. */
+/**
+ * Chip anchors positioned on outer edges of phone frame.
+ * Overlaps bezel by <= 30%, never covers chat text, voice notes or header.
+ * Hidden on mobile/tablet (below 1024px, lg).
+ */
 const CHIP_POSITIONS = [
-  "top-6 -left-4 sm:-left-10",
-  "top-1/4 -right-4 sm:-right-10",
-  "bottom-24 -left-3 sm:-left-14",
-  "bottom-8 -right-3 sm:-right-8",
+  // Top-left: sits outside the left bezel near top, clear of the header
+  "top-12 -left-24 xl:-left-28",
+  // Top-right: sits outside the right bezel, clear of the user voice note
+  "top-28 -right-24 xl:-right-28",
+  // Bottom-left: sits outside the left bezel, clear of the bot card
+  "bottom-28 -left-24 xl:-left-28",
+  // Bottom-right: sits outside the right bezel near bottom
+  "bottom-10 -right-20 xl:-right-24",
 ];
 
 export default function Hero() {
   return (
-    <Section id="hero" tone="white" className="relative isolate overflow-hidden">
+    <Section
+      id="hero"
+      tone="white"
+      className="relative isolate overflow-hidden pt-24 sm:pt-28 lg:pt-32 scroll-mt-28"
+    >
       {/* Soft green gradient blob */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-48 -right-32 size-[34rem] rounded-full bg-brand-green/20 blur-3xl" />
@@ -39,7 +52,7 @@ export default function Hero() {
           <p className="max-w-xl text-lg leading-relaxed text-ink/80 sm:text-xl">{copy.subtext}</p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button href={copy.primaryCta.href} size="lg">
+            <Button href={SITE.whatsappUrl} target="_blank" rel="noopener noreferrer" icon={MessageCircle} size="lg">
               {copy.primaryCta.label}
             </Button>
             <Button href={copy.secondaryCta.href} variant="outline" size="lg">
@@ -117,12 +130,12 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Floating chips */}
+              {/* Floating chips: hidden below lg (1024px), positioned strictly on outer edges */}
               {copy.chips.map((chip, index) => (
                 <span
                   key={chip.label}
                   style={{ animationDelay: `${index * 0.9}s` }}
-                  className={`animate-float absolute hidden items-center gap-2 rounded-pill border border-brand-green/10 bg-white/95 px-3.5 py-2 font-heading text-sm font-semibold text-brand-dark shadow-soft backdrop-blur sm:inline-flex ${
+                  className={`animate-float absolute hidden items-center gap-2 rounded-pill border border-brand-green/10 bg-white/95 px-3.5 py-2 font-heading text-sm font-semibold text-brand-dark shadow-soft backdrop-blur lg:inline-flex ${
                     CHIP_POSITIONS[index] ?? ""
                   }`}
                 >

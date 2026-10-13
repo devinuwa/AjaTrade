@@ -26,21 +26,4 @@ export const steps = [
   },
 ];
 
-export const faqs = [
-  {
-    question: "Is it free?",
-    answer: "[TODO: confirm the final pricing and free access policy.]",
-  },
-  {
-    question: "Do I need lots of data?",
-    answer: "[TODO: confirm expected WhatsApp data use for voice notes and photos.]",
-  },
-  {
-    question: "Which languages?",
-    answer: "[TODO: confirm the launch language coverage and supported input formats.]",
-  },
-  {
-    question: "Is my data private?",
-    answer: "[TODO: add the approved privacy and data retention explanation.]",
-  },
-];
+export { faqs } from "./faqs.js";
